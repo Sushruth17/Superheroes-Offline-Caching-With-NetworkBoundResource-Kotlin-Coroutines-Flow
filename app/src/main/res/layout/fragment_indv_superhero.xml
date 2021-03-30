@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.indvsuperhero.IndvSuperheroFragment">
+    tools:context=".ui.indvsuperhero.IndvSuperheroFragment"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imv"
         android:layout_width="match_parent"
-        android:layout_height="480dp"/>
-</LinearLayout>
+        android:layout_height="240dp"
+        android:scaleType="centerCrop"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imv"
+        android:background="@color/secondary">
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabLayout"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        tools:layout_editor_absoluteX="8dp" />
+</RelativeLayout>
