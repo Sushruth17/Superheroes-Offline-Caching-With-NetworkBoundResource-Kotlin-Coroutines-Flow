@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Superhero</string>
     <string name="title_home">Home</string>
-    <string name="title_superheros">Super Hero</string>
+    <string name="title_superheros">Superheros</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 </resources>

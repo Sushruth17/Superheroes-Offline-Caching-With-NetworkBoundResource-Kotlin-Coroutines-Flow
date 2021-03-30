@@ -8,12 +8,28 @@
     android:paddingEnd="40dp"
     android:layout_margin="4dp">
 
+    <TextView
+        android:id="@+id/text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="8dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="30sp"
+        android:fontFamily="@font/manrope_bold"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        tools:text="Superhero" />
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv"
         app:cardCornerRadius="13dp"
         android:elevation="10dp"
+        android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
+        android:layout_below="@id/text_view_name"
         android:layout_height="380dp">
     <ImageView
         android:id="@+id/image_view_logo"
@@ -24,18 +40,5 @@
     </androidx.cardview.widget.CardView>
 
 
-    <TextView
-        android:id="@+id/text_view_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:elevation="8dp"
-        android:layout_marginTop="10dp"
-        android:textSize="23sp"
-        android:layout_below="@id/cv"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        tools:text="Superhero" />
 
 </RelativeLayout>
