@@ -8,6 +8,8 @@
     android:paddingEnd="40dp"
     android:layout_margin="4dp">
 
+
+
     <TextView
         android:id="@+id/text_view_name"
         android:layout_width="wrap_content"

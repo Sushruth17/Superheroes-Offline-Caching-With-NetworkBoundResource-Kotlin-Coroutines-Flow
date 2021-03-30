@@ -1,6 +1,7 @@
 package com.seventeen.superhero.ui.indvsuperhero
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -12,6 +13,7 @@ import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.google.android.material.tabs.TabLayout.TabLayoutOnPageChangeListener
 import com.seventeen.superhero.R
 import com.seventeen.superhero.databinding.FragmentIndvSuperheroBinding
+import com.seventeen.superhero.utils.UtilsString
 
 
 class IndvSuperheroFragment: Fragment(R.layout.fragment_indv_superhero) {
@@ -23,6 +25,10 @@ class IndvSuperheroFragment: Fragment(R.layout.fragment_indv_superhero) {
         super.onViewCreated(view, savedInstanceState)
 
         val binding = FragmentIndvSuperheroBinding.bind(view)
+
+        UtilsString.superheroData = args.result
+
+        Log.i("selected","superhero--->${args.result.name}")
 
         (activity as AppCompatActivity?)!!.supportActionBar!!.title = args.result.name
 
@@ -40,8 +46,9 @@ class IndvSuperheroFragment: Fragment(R.layout.fragment_indv_superhero) {
                 tabGravity = TabLayout.GRAVITY_FILL
             }
 
+
             val fragmentManager = (activity as FragmentActivity).supportFragmentManager
-            val adapter = IndvSuperheroAdapter(requireContext(), fragmentManager,
+            val adapter = IndvSuperheroAdapter(context, fragmentManager,
                 tabLayout.tabCount)
             viewPager.adapter = adapter
             viewPager.addOnPageChangeListener(TabLayoutOnPageChangeListener(tabLayout))
@@ -52,6 +59,9 @@ class IndvSuperheroFragment: Fragment(R.layout.fragment_indv_superhero) {
                 override fun onTabUnselected(tab: TabLayout.Tab) {}
                 override fun onTabReselected(tab: TabLayout.Tab) {}
             })
+            adapter.notifyDataSetChanged()
+
+
 
         }
 

@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.indvsuperhero.tabs.AppearanceTab">
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/gender"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="AppearanceTab Fragment"
+        android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="16sp"
-        android:textStyle="bold" />
-</FrameLayout>
+        android:textStyle="bold"
+        tools:text="Gender: Male"/>
+    <TextView
+        android:id="@+id/race"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Gender: Male"/>
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Gender: Male"/>
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Gender: Male"/>
+    <TextView
+        android:id="@+id/hair_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Hair Color: Male"/>
+    <TextView
+        android:id="@+id/eye_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Eye Color: Male"/>
+</LinearLayout>

@@ -10,10 +10,10 @@ import com.seventeen.superhero.ui.indvsuperhero.tabs.PowerstatsTab
 
 @Suppress("DEPRECATION")
 internal class IndvSuperheroAdapter(
-    var context: Context,
+    var context: Context?,
     fm: FragmentManager,
     var totalTabs: Int
-) :
+    ) :
     FragmentPagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         return when (position) {
@@ -32,4 +32,6 @@ internal class IndvSuperheroAdapter(
     override fun getCount(): Int {
         return totalTabs
     }
+
+
 }
