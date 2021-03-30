@@ -1,7 +1,10 @@
 package com.seventeen.superhero.data
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Biography(
 
 	@field:SerializedName("place-of-birth")
@@ -24,4 +27,4 @@ data class Biography(
 
 	@field:SerializedName("alter-egos")
 	val alterEgos: String? = null
-)
+): Parcelable

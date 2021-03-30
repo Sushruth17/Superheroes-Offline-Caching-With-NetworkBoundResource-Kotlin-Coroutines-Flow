@@ -1,7 +1,10 @@
 package com.seventeen.superhero.data
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Appearance(
 
 	@field:SerializedName("eye-color")
@@ -21,4 +24,4 @@ data class Appearance(
 
 	@field:SerializedName("hair-color")
 	val hairColor: String? = null
-)
+): Parcelable

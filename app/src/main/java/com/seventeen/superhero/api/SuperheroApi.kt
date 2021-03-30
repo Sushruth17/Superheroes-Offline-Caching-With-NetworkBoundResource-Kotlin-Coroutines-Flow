@@ -12,7 +12,9 @@ interface SuperheroApi {
         const val BASE_URL = "https://superheroapi.com/api/${access_token}/"
     }
 
-    @GET("search/1")
-    suspend fun getSuperhero(): SuperheroResponse
+    @GET("search/{name}")
+    suspend fun getSuperhero(
+        @Path("name") name: String
+    ): SuperheroResponse
 
 }

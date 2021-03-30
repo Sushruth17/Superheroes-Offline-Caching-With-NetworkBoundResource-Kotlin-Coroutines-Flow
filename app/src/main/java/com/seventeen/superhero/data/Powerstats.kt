@@ -1,7 +1,10 @@
 package com.seventeen.superhero.data
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Powerstats(
 
 	@field:SerializedName("strength")
@@ -21,4 +24,4 @@ data class Powerstats(
 
 	@field:SerializedName("intelligence")
 	val intelligence: String? = null
-)
+): Parcelable

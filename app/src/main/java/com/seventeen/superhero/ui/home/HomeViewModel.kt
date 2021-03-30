@@ -17,15 +17,24 @@ class HomeViewModel @Inject constructor(
     api: SuperheroApi
 ): ViewModel() {
 
-    private val superheroLiveData = MutableLiveData<SuperheroResponse>()
-    val superheros: LiveData<SuperheroResponse> = superheroLiveData
+    private val superheroLiveData = MutableLiveData<List<SuperheroResponse>>()
+    val superheros: LiveData<List<SuperheroResponse>> = superheroLiveData
+    private val superherosList = mutableListOf<SuperheroResponse>()
+
+
+    private val defaultList = arrayListOf(
+        "batman", "ironman", "superman", "hulk", "captain america", "Black Panther"
+    )
 
     init {
         viewModelScope.launch {
-            val superheros = api.getSuperhero()
-            Log.i("test", "superheros-->$superheros")
-            delay(2000)
-            superheroLiveData.value = superheros
+            for (i in defaultList) {
+                val superheros = api.getSuperhero(i)
+                Log.i("test", "superheros-->$superheros")
+                delay(2000)
+                superherosList.add(superheros)
+                superheroLiveData.value = superherosList
+            }
         }
     }
 }

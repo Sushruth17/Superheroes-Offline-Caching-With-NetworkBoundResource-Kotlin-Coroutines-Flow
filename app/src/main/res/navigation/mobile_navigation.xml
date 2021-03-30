@@ -8,8 +8,12 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.seventeen.superhero.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="@string/title_superheros"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_indvSuperhero"
+            app:destination="@id/indvSuperhero" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -22,4 +26,12 @@
         android:name="com.seventeen.superhero.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/indvSuperhero"
+        android:name="com.seventeen.superhero.ui.indvsuperhero.IndvSuperheroFragment"
+        android:label="IndvSuperhero" >
+        <argument
+            android:name="result"
+            app:argType="com.seventeen.superhero.data.ResultsItem" />
+    </fragment>
 </navigation>

@@ -1,7 +1,10 @@
 package com.seventeen.superhero.data
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class ResultsItem(
 
 	@field:SerializedName("image")
@@ -27,4 +30,4 @@ data class ResultsItem(
 
 	@field:SerializedName("connections")
 	val connections: Connections? = null
-)
+): Parcelable
