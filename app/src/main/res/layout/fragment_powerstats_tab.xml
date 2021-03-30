@@ -3,8 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ui.indvsuperhero.tabs.PowerstatsTab">
+
+    <at.grabner.circleprogress.CircleProgressView
+        android:id="@+id/circular_view"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        CircleProgressView:cpv_rimWidth="10dp"
+        CircleProgressView:cpv_outerContourColor="@color/primary_dark"
+        CircleProgressView:cpv_innerContourColor="@color/primary_dark"
+        CircleProgressView:cpv_rimColor="@color/primary_light"
+        CircleProgressView:cpv_barColor="@color/primary"
+        CircleProgressView:cpv_value="30"
+        CircleProgressView:cpv_maxValue="100"
+        CircleProgressView:cpv_text="intelligence"/>
+
 
     <TextView
         android:id="@+id/intelligence"

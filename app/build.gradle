@@ -83,7 +83,11 @@ dependencies {
     // Fragment
     implementation 'androidx.fragment:fragment-ktx:1.3.2'
 
+    // Carousel gallery view
     implementation 'com.azoft.carousellayoutmanager:carousel:1.4.5'
+
+    // Circle Progress View
+    implementation 'com.github.jakob-grabner:Circle-Progress-View:1.4'
 
 }
 
