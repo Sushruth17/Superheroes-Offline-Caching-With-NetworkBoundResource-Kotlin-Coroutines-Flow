@@ -1,24 +1,21 @@
 package com.seventeen.superhero.ui.home
 
-import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.seventeen.superhero.api.SuperheroApi
-import com.seventeen.superhero.data.SuperheroResponse
+import androidx.lifecycle.asLiveData
+import com.seventeen.superhero.data.db.SuperheroRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    api: SuperheroApi
+    repository: SuperheroRepository
 ): ViewModel() {
 
-    private val superheroLiveData = MutableLiveData<List<SuperheroResponse>>()
-    val superheros: LiveData<List<SuperheroResponse>> = superheroLiveData
+    val superheroes = repository.getSuperheroes().asLiveData()
+
+
+/*    private val superheroLiveData = MutableLiveData<List<SuperheroResponse>>()
+    val superheroes: LiveData<List<SuperheroResponse>> = superheroLiveData
     private val superherosList = mutableListOf<SuperheroResponse>()
 
 
@@ -36,5 +33,5 @@ class HomeViewModel @Inject constructor(
                 superheroLiveData.value = superherosList
             }
         }
-    }
+    }*/
 }

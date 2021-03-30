@@ -1,6 +1,9 @@
 package com.seventeen.superhero.di
 
+import android.app.Application
+import androidx.room.Room
 import com.seventeen.superhero.api.SuperheroApi
+import com.seventeen.superhero.data.db.SuperheroDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,5 +29,10 @@ object AppModule {
     fun provideSuperheroApi(retrofit: Retrofit): SuperheroApi =
         retrofit.create(SuperheroApi::class.java)
 
+    @Provides
+    @Singleton
+    fun provideDatabase(app: Application) : SuperheroDatabase =
+        Room.databaseBuilder(app, SuperheroDatabase::class.java, "restaurant_database")
+            .build()
 }
 

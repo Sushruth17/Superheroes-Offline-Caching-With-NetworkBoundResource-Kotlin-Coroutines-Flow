@@ -42,20 +42,20 @@ class HomeFragment : Fragment(R.layout.fragment_home), HomeAdapter.OnItemClickLi
                 lm.setPostLayoutListener(CarouselZoomPostLayoutListener())
             }
 
-            progressBar.visibility = View.VISIBLE
+//            progressBar.visibility = View.VISIBLE
 
-            homeViewModel.superheros.observe(viewLifecycleOwner) { result ->
+            homeViewModel.superheroes.observe(viewLifecycleOwner) { result ->
                 Log.i("test","result------$result")
 //                if (result != null)
 //                    superherosList.add(result)
-                homeAdapter.submitList(result)
+                homeAdapter.submitList(result.data)
                 homeAdapter.notifyDataSetChanged()
 
-                progressBar.visibility = View.GONE
+//                progressBar.visibility = View.GONE
 
-//                progressBar.isVisible = result is Resource.Loading<*> && result.isNullOrEmpty()
-//                textViewError.isVisible = result is Resource.Error<*> && result.isNullOrEmpty()
-//                textViewError.text = result.error.localizedMessage
+                progressBar.isVisible = result is Resource.Loading && result.data.isNullOrEmpty()
+                textViewError.isVisible = result is Resource.Error && result.data.isNullOrEmpty()
+                textViewError.text = result.error?.localizedMessage
             }
 
         }
