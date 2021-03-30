@@ -47,8 +47,8 @@ class IndvSuperheroFragment: Fragment(R.layout.fragment_indv_superhero) {
             }
 
 
-            val fragmentManager = (activity as FragmentActivity).supportFragmentManager
-            val adapter = IndvSuperheroAdapter(context, fragmentManager,
+//            val fragmentManager = childFragmentManager
+            val adapter = IndvSuperheroAdapter(context, childFragmentManager,
                 tabLayout.tabCount)
             viewPager.adapter = adapter
             viewPager.addOnPageChangeListener(TabLayoutOnPageChangeListener(tabLayout))

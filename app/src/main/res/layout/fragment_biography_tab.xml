@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.indvsuperhero.tabs.BiographyTab">
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/full_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="BiographyTab Fragment"
+        android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="16sp"
-        android:textStyle="bold" />
-</FrameLayout>
+        android:textStyle="bold"
+        tools:text="full_name: Male"/>
+    <TextView
+        android:id="@+id/alter_egos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="alter_egos: Male"/>
+    <TextView
+        android:id="@+id/aliases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="aliases: Male"/>
+    <TextView
+        android:id="@+id/place_of_birth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="place_of_birth: Male"/>
+    <TextView
+        android:id="@+id/first_appearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="first_appearance: Male"/>
+    <TextView
+        android:id="@+id/publisher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="publisher: Male"/>
+</LinearLayout>

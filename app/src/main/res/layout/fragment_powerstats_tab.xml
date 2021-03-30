@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.indvsuperhero.tabs.PowerstatsTab">
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/intelligence"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="PowerstatsTab Fragment"
+        android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="16sp"
-        android:textStyle="bold" />
-</FrameLayout>
+        android:textStyle="bold"
+        tools:text="intelligence: Male"/>
+    <TextView
+        android:id="@+id/strength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="strength: Male"/>
+    <TextView
+        android:id="@+id/speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="speed: Male"/>
+    <TextView
+        android:id="@+id/durability"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="durability: Male"/>
+    <TextView
+        android:id="@+id/power"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="power: Male"/>
+    <TextView
+        android:id="@+id/combat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="combat: Male"/>
+</LinearLayout>

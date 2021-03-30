@@ -19,12 +19,11 @@
         android:layout_below="@id/imv"
         android:background="@color/secondary">
     </com.google.android.material.tabs.TabLayout>
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tabLayout"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="100dp"
-        tools:layout_editor_absoluteX="8dp" />
+        android:layout_marginTop="30dp"/>
 </RelativeLayout>
