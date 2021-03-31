@@ -25,8 +25,6 @@ class HomeFragment : Fragment(R.layout.fragment_home), HomeAdapter.OnItemClickLi
     private val binding get() = _binding!!
     private val homeViewModel: HomeViewModel by viewModels()
 
-    private val superherosList = mutableListOf<SuperheroResponse>()
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -42,16 +40,11 @@ class HomeFragment : Fragment(R.layout.fragment_home), HomeAdapter.OnItemClickLi
                 lm.setPostLayoutListener(CarouselZoomPostLayoutListener())
             }
 
-//            progressBar.visibility = View.VISIBLE
 
             homeViewModel.superheroes.observe(viewLifecycleOwner) { result ->
                 Log.i("test","result------${result.data}")
-//                if (result != null)
-//                    superherosList.add(result)
                 homeAdapter.submitList(result.data)
                 homeAdapter.notifyDataSetChanged()
-
-//                progressBar.visibility = View.GONE
 
                 progressBar.isVisible = result is Resource.Loading && result.data.isNullOrEmpty()
                 textViewError.isVisible = result is Resource.Error && result.data.isNullOrEmpty()
@@ -59,13 +52,6 @@ class HomeFragment : Fragment(R.layout.fragment_home), HomeAdapter.OnItemClickLi
             }
 
         }
-//        val rv = getView()?.findViewById<RecyclerView>(R.id.recycler_view)
-//        rv?.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-//        rv?.adapter = homeAdapter
-
-
-
-
     }
 
     override fun onItemClick(result: ResultsItem) {

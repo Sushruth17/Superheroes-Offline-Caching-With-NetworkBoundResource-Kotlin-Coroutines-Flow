@@ -1,11 +1,13 @@
 package com.seventeen.superhero.data.db
 
 import android.util.Log
+import androidx.lifecycle.viewModelScope
 import androidx.room.withTransaction
 import com.seventeen.superhero.api.SuperheroApi
 import com.seventeen.superhero.data.SuperheroResponse
 import com.seventeen.superhero.utils.networkBoundResource
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class SuperheroRepository @Inject constructor(
@@ -35,6 +37,5 @@ class SuperheroRepository @Inject constructor(
                 superheroDao.deleteAllSuperheroes()
                 superheroDao.insertSuperheroes(superheroesList)
             }
-        }
-    )
+        })
 }

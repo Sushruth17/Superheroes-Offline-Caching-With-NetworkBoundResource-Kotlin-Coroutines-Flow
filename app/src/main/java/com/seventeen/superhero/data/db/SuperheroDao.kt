@@ -13,6 +13,9 @@ interface SuperheroDao {
     @Query("SELECT * FROM superheroes")
     fun getAllSuperheroes(): Flow<List<SuperheroResponse>>
 
+    @Query("SELECT * FROM superheroes WHERE resultsFor LIKE :name")
+    fun getSuperheroByName(name: String): Flow<List<SuperheroResponse>>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertSuperheroes(superheroes: List<SuperheroResponse>)
 

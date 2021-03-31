@@ -89,6 +89,10 @@ dependencies {
     // Circle Progress View
     implementation 'com.github.jakob-grabner:Circle-Progress-View:1.4'
 
+    // Lottie Animation
+    implementation 'com.airbnb.android:lottie:3.6.1'
+
+
 }
 
 kapt {

@@ -23,7 +23,7 @@ class HomeAdapter(private val listener: OnItemClickListener) : ListAdapter<Super
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = getItem(position)
         if (currentItem != null) {
-            holder.bind(currentItem.results?.get(0))
+            holder.bind(currentItem.results[0])
         }
     }
 
@@ -36,7 +36,7 @@ class HomeAdapter(private val listener: OnItemClickListener) : ListAdapter<Super
                 if (position != RecyclerView.NO_POSITION){
                     val item = getItem(position)
                     if (item != null){
-                        item.results?.get(0)?.let { it1 -> listener.onItemClick(it1) }
+                        item.results[0].let { it1 -> listener.onItemClick(it1) }
                     }
                 }
             }
