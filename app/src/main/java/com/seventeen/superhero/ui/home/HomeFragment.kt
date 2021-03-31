@@ -45,7 +45,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), HomeAdapter.OnItemClickLi
 //            progressBar.visibility = View.VISIBLE
 
             homeViewModel.superheroes.observe(viewLifecycleOwner) { result ->
-                Log.i("test","result------$result")
+                Log.i("test","result------${result.data}")
 //                if (result != null)
 //                    superherosList.add(result)
                 homeAdapter.submitList(result.data)

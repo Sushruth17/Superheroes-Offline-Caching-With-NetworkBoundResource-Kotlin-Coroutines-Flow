@@ -5,68 +5,204 @@
     android:layout_height="match_parent"
     xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".ui.indvsuperhero.tabs.PowerstatsTab">
 
-    <at.grabner.circleprogress.CircleProgressView
-        android:id="@+id/circular_view"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        CircleProgressView:cpv_rimWidth="10dp"
-        CircleProgressView:cpv_outerContourColor="@color/primary_dark"
-        CircleProgressView:cpv_innerContourColor="@color/primary_dark"
-        CircleProgressView:cpv_rimColor="@color/primary_light"
-        CircleProgressView:cpv_barColor="@color/primary"
-        CircleProgressView:cpv_value="30"
-        CircleProgressView:cpv_maxValue="100"
-        CircleProgressView:cpv_text="intelligence"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/intelligence"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Intelligence"/>
+
+        <TextView
+            android:id="@+id/strength"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Strength"/>
+        <TextView
+            android:id="@+id/speed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Speed"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/cpv_intelligence"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dp"
+            CircleProgressView:cpv_rimWidth="10dp"
+            CircleProgressView:cpv_outerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_innerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_rimColor="@color/white"
+            CircleProgressView:cpv_barColor="@color/secondary"
+            CircleProgressView:cpv_barColor1="@color/primary"
+            CircleProgressView:cpv_barColor2="@color/primary"
+            CircleProgressView:cpv_barColor3="@color/primary_dark"            CircleProgressView:cpv_value="30"
+            CircleProgressView:cpv_maxValue="100"/>
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/cpv_strength"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dp"
+            CircleProgressView:cpv_rimWidth="10dp"
+            CircleProgressView:cpv_outerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_innerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_rimColor="@color/white"
+            CircleProgressView:cpv_barColor="@color/secondary"
+            CircleProgressView:cpv_barColor1="@color/primary"
+            CircleProgressView:cpv_barColor2="@color/primary"
+            CircleProgressView:cpv_barColor3="@color/primary_dark"            CircleProgressView:cpv_value="30"
+            CircleProgressView:cpv_maxValue="100"/>
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/cpv_speed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dp"
+            CircleProgressView:cpv_rimWidth="10dp"
+            CircleProgressView:cpv_outerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_innerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_rimColor="@color/white"
+            CircleProgressView:cpv_barColor="@color/secondary"
+            CircleProgressView:cpv_barColor1="@color/primary"
+            CircleProgressView:cpv_barColor2="@color/primary"
+            CircleProgressView:cpv_barColor3="@color/primary_dark"            CircleProgressView:cpv_value="30"
+            CircleProgressView:cpv_maxValue="100"/>
+
+    </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/intelligence"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        tools:text="intelligence: Male"/>
-    <TextView
-        android:id="@+id/strength"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/durability"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Durability"/>
+
+        <TextView
+            android:id="@+id/power"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Power"/>
+        <TextView
+            android:id="@+id/combat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Combat"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        tools:text="strength: Male"/>
-    <TextView
-        android:id="@+id/speed"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        tools:text="speed: Male"/>
-    <TextView
-        android:id="@+id/durability"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        tools:text="durability: Male"/>
-    <TextView
-        android:id="@+id/power"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        tools:text="power: Male"/>
-    <TextView
-        android:id="@+id/combat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        tools:text="combat: Male"/>
+        android:weightSum="3"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/cpv_durability"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dp"
+            CircleProgressView:cpv_rimWidth="10dp"
+            CircleProgressView:cpv_outerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_innerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_rimColor="@color/white"
+            CircleProgressView:cpv_barColor="@color/secondary"
+            CircleProgressView:cpv_barColor1="@color/primary"
+            CircleProgressView:cpv_barColor2="@color/primary"
+            CircleProgressView:cpv_barColor3="@color/primary_dark"
+            CircleProgressView:cpv_value="90"
+            CircleProgressView:cpv_maxValue="100"/>
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/cpv_power"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dp"
+            CircleProgressView:cpv_rimWidth="10dp"
+            CircleProgressView:cpv_outerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_innerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_rimColor="@color/white"
+            CircleProgressView:cpv_barColor="@color/secondary"
+            CircleProgressView:cpv_barColor1="@color/primary"
+            CircleProgressView:cpv_barColor2="@color/primary"
+            CircleProgressView:cpv_barColor3="@color/primary_dark"            CircleProgressView:cpv_value="30"
+            CircleProgressView:cpv_maxValue="100"/>
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/cpv_combat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dp"
+            CircleProgressView:cpv_rimWidth="10dp"
+            CircleProgressView:cpv_outerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_innerContourColor="@color/primary_dark"
+            CircleProgressView:cpv_rimColor="@color/white"
+            CircleProgressView:cpv_barColor="@color/secondary"
+            CircleProgressView:cpv_barColor1="@color/primary"
+            CircleProgressView:cpv_barColor2="@color/primary"
+            CircleProgressView:cpv_barColor3="@color/primary_dark"            CircleProgressView:cpv_value="30"
+            CircleProgressView:cpv_maxValue="100"/>
+    </LinearLayout>
 </LinearLayout>

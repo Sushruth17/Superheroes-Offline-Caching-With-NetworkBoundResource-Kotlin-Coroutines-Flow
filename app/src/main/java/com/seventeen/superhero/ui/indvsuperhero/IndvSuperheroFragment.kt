@@ -38,16 +38,13 @@ class IndvSuperheroFragment: Fragment(R.layout.fragment_indv_superhero) {
                 .load(args.result.image?.url)
                 .into(imv)
 
-
             tabLayout.apply {
-                addTab(tabLayout.newTab().setText("Appearance"))
                 addTab(tabLayout.newTab().setText("Power Stats"))
+                addTab(tabLayout.newTab().setText("Appearance"))
                 addTab(tabLayout.newTab().setText("Biography"))
                 tabGravity = TabLayout.GRAVITY_FILL
             }
 
-
-//            val fragmentManager = childFragmentManager
             val adapter = IndvSuperheroAdapter(context, childFragmentManager,
                 tabLayout.tabCount)
             viewPager.adapter = adapter
@@ -61,11 +58,7 @@ class IndvSuperheroFragment: Fragment(R.layout.fragment_indv_superhero) {
             })
             adapter.notifyDataSetChanged()
 
-
-
         }
-
-
 
     }
 

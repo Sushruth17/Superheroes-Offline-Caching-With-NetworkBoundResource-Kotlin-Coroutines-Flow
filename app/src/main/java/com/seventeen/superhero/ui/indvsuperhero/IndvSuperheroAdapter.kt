@@ -18,10 +18,10 @@ internal class IndvSuperheroAdapter(
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> {
-                AppearanceTab()
+                PowerstatsTab()
             }
             1 -> {
-                PowerstatsTab()
+                AppearanceTab()
             }
             2 -> {
                 BiographyTab()
